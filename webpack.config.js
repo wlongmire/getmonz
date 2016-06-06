@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
@@ -26,9 +27,6 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      //api:
-      openWeatherMap: 'app/api/openWeatherMap.jsx',
-
       //main page components
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
@@ -53,6 +51,12 @@ module.exports = {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/
         }
+    ]
+  },
+
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './node_modules/foundation-sites/scss')
     ]
   },
 
