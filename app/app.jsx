@@ -46,8 +46,8 @@ ReactDOM.render(
       <Route path="/sponsor/:user_id"                   component={SponserCurrentCampaigns} />
       <Route path="/sponsor/:user_id/campaign/:camp_id" component={SponserSingleCampaign} />
       <Route path="/sponsor/:user_id/history"           component={SponserCampaignHistory} />
-      <Route path="/sponsor/:user_id/account"           component={SponserAccount} />
       <Route path="/sponsor/:user_id/new"               component={SponserNewCampaign} />
+      <Route path="/sponsor/:user_id/account"           component={SponserAccount} />
 
     </Route>
   </Router>,
