@@ -28,8 +28,10 @@ module.exports = {
     root: __dirname,
     modulesDirectories: [
       'node_modules',
-      './app/components',
-      './app/api'
+      './app/components/',
+      './app/components/pages/common',
+      './app/components/pages/streamer',
+      './app/components/pages/sponsor'
     ],
     alias: {
       //Components loaded in automatically through the modulesDirectories prop

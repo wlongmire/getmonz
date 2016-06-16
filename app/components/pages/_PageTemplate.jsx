@@ -1,7 +1,7 @@
-const { Link } = require('react-router');
-const React = require('react');
+let { Link } = require('react-router');
+let React = require('react');
 
-const PageTemplate = React.createClass({
+let PageTemplate = React.createClass({
   render: function() {
     return(
       <div>

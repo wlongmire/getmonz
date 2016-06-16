@@ -1,14 +1,12 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+let React = require('react');
+let ReactDOM = require('react-dom');
 
-const Nav = require('Nav');
+let Nav = require('Nav');
 
-const Main = React.createClass({
+let Main = React.createClass({
   render:function() {
     return(
       <div>
-        <Nav />
-
         <div>
           {this.props.children}
         </div>
