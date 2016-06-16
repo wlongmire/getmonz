@@ -26,13 +26,13 @@ module.exports = {
 
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components',
+      './app/api'
+    ],
     alias: {
-      //main page components
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/Nav.jsx',
-
-      //subpages
-      PageTemplate: 'app/components/pages/PageTemplate.jsx',
+      //Components loaded in automatically through the modulesDirectories prop
 
       //css
       applicationStyles: 'public/styles/app.scss'
