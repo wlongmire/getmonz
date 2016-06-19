@@ -1,6 +1,10 @@
 @import 'base/variables.scss';
 
-//foundation files
+//foundation styles
 @import 'base/foundation-settings';
 @import 'foundation';
 @include foundation-everything;
+
+//custom styles
+@import 'base/nav';
+@import 'base/base';

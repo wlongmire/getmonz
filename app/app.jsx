@@ -36,18 +36,18 @@ ReactDOM.render(
       <Route path="/signup" component={Signup} />
 
       //streamer routes
-      <Route path="/streamer/:user_id"                  component={StreamerCurrentCampaign} />
-      <Route path="/streamer/:user_id/upcoming"         component={StreamerUpcomingCampaigns} />
-      <Route path="/streamer/:user_id/campaign/:camp_id" component={StreamerCampaignDetails} />
-      <Route path="/streamer/:user_id/history"          component={StreamerHistory} />
-      <Route path="/streamer/:user_id/account"          component={StreamerAccount} />
+      <Route path="/streamer/:user_id"                    component={StreamerCurrentCampaign} />
+      <Route path="/streamer/:user_id/upcoming"           component={StreamerUpcomingCampaigns} />
+      <Route path="/streamer/:user_id/campaign/:camp_id"  component={StreamerCampaignDetails} />
+      <Route path="/streamer/:user_id/history"            component={StreamerHistory} />
+      <Route path="/streamer/:user_id/account"            component={StreamerAccount} />
 
       //sponsor routes
-      <Route path="/sponsor/:user_id"                   component={SponserCurrentCampaigns} />
-      <Route path="/sponsor/:user_id/campaign/:camp_id" component={SponserSingleCampaign} />
-      <Route path="/sponsor/:user_id/history"           component={SponserCampaignHistory} />
-      <Route path="/sponsor/:user_id/new"               component={SponserNewCampaign} />
-      <Route path="/sponsor/:user_id/account"           component={SponserAccount} />
+      <Route path="/sponsor/:user_id"                     component={SponserCurrentCampaigns} />
+      <Route path="/sponsor/:user_id/campaign/:camp_id"   component={SponserSingleCampaign} />
+      <Route path="/sponsor/:user_id/history"             component={SponserCampaignHistory} />
+      <Route path="/sponsor/:user_id/new"                 component={SponserNewCampaign} />
+      <Route path="/sponsor/:user_id/account"             component={SponserAccount} />
 
     </Route>
   </Router>,
