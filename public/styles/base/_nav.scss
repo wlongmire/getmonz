@@ -8,4 +8,14 @@ nav.top-bar {
       width: 3.5rem;
     }
   }
+
+  ul {
+    li {
+      padding:0;
+      a {
+          padding:1rem;
+          font-size: 0.9em;
+      }
+    }
+  }
 }

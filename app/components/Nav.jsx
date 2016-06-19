@@ -15,8 +15,8 @@ let Nav = React.createClass({
         username = (type === "sponsor")?"razor":"wlongmire",
         getMenuData = function(type) {
           let menus = {
-            streamer:   [{route:`/streamer/${username}`,  text:'My Campaign'},      {route:`/streamer/${username}/upcoming`,text:'Upcoming Campaigns'}, {route:`/streamer/${username}/history`, text:'Campaign History'}, {route:`/streamer/${username}/account`, text:'Your Account'}],
-            sponsor:    [{route:`/sponsor/${username}`,   text:'Current Campaign'}, {route:`/sponsor/${username}/history`,  text:'Campaigns History'},  {route:`/sponsor/${username}/account`,  text:'Your Account'},     {route:`/sponsor/${username}/new`,      text:'Create Campaign'}]
+            streamer:   [{id:1, route:`/streamer/${username}`,  text:'My Campaign'},      {id:2, route:`/streamer/${username}/upcoming`,text:'Upcoming Campaigns'}, {id:3, route:`/streamer/${username}/history`, text:'Campaign History'}, {id:4, route:`/streamer/${username}/account`, text:'Your Account'}],
+            sponsor:    [{id:1, route:`/sponsor/${username}`,   text:'Current Campaign'}, {id:2, route:`/sponsor/${username}/history`,  text:'Campaigns History'},  {id:3, route:`/sponsor/${username}/account`,  text:'Your Account'},     {id:4, route:`/sponsor/${username}/new`,      text:'Create Campaign'}]
           };
 
 
@@ -25,20 +25,18 @@ let Nav = React.createClass({
 
 
       return(
-        <nav className="top-bar">
+        <nav className="top-bar" data-topbar role="navigation">
 
-          <div className="top-bar-left">
-
+          <div className="right">
             <ul className="menu">
-                <li><IndexLink className="brand" to="/"> <img src="./images/brand.png"/> </IndexLink></li>
+              <li><IndexLink className="brand" to="/"> <img src="./images/brand.png"/> </IndexLink></li>
                 {
-                  getMenuData(type).map( (item)=> <li><Link to={ item.route }> { item.text } </Link></li> )
+                  getMenuData(type).map( (item)=> <li key={item.id}><Link to={ item.route }> { item.text } </Link></li> )
                 }
                 <li><IndexLink to="/"> Logout </IndexLink> </li>
             </ul>
-
           </div>
-
+          
         </nav>
       );
     }

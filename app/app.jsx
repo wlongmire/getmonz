@@ -34,7 +34,7 @@ ReactDOM.render(
 
       <IndexRoute component={Home} />
       <Route path="/signup" component={Signup} />
-
+      
       //streamer routes
       <Route path="/streamer/:user_id"                    component={StreamerCurrentCampaign} />
       <Route path="/streamer/:user_id/upcoming"           component={StreamerUpcomingCampaigns} />
