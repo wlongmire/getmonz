@@ -6,11 +6,8 @@ let Nav = require('Nav');
 let Main = React.createClass({
   render:function() {
     return(
-      <div>
-        <div>
-          {this.props.children}
-        </div>
-
+      <div className="medium-6 large-4 small-centered columns">
+        {this.props.children}
       </div>
     );
   }

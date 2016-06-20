@@ -7,7 +7,7 @@ let Nav = React.createClass({
     },
 
     defaultProps: {
-        type:React.PropTypes.string.isRequired
+        type:"sponsor"
     },
 
     render:function() {
@@ -16,7 +16,7 @@ let Nav = React.createClass({
         getMenuData = function(type) {
           let menus = {
             streamer:   [{id:1, route:`/streamer/${username}`,  text:'My Campaign'},      {id:2, route:`/streamer/${username}/upcoming`,text:'Upcoming Campaigns'}, {id:3, route:`/streamer/${username}/history`, text:'Campaign History'}, {id:4, route:`/streamer/${username}/account`, text:'Your Account'}],
-            sponsor:    [{id:1, route:`/sponsor/${username}`,   text:'Current Campaign'}, {id:2, route:`/sponsor/${username}/history`,  text:'Campaigns History'},  {id:3, route:`/sponsor/${username}/account`,  text:'Your Account'},     {id:4, route:`/sponsor/${username}/new`,      text:'Create Campaign'}]
+            sponsor:    [{id:1, route:`/sponsor/${username}`,   text:'Current Campaigns'}, {id:2, route:`/sponsor/${username}/history`,  text:'Campaigns History'},  {id:3, route:`/sponsor/${username}/account`,  text:'Your Account'},     {id:4, route:`/sponsor/${username}/new`,      text:'Create Campaign'}]
           };
 
 
@@ -36,7 +36,7 @@ let Nav = React.createClass({
                 <li><IndexLink to="/"> Logout </IndexLink> </li>
             </ul>
           </div>
-          
+
         </nav>
       );
     }
