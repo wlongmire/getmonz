@@ -1,11 +1,17 @@
 nav.top-bar {
   padding: 0px;
+  border-bottom: 5px solid #F87251;
+  position: fixed;
+  width: 100%;
+  top:0;
+
+  z-index: 999;
 
   .brand {
     padding: 0px;
 
     img {
-      width: 3.5rem;
+      width: 60px;
     }
   }
 

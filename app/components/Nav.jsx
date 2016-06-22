@@ -19,25 +19,24 @@ let Nav = React.createClass({
             sponsor:    [{id:1, route:`/sponsor/${username}`,   text:'Current Campaigns'}, {id:2, route:`/sponsor/${username}/history`,  text:'Campaigns History'},  {id:3, route:`/sponsor/${username}/account`,  text:'Your Account'},     {id:4, route:`/sponsor/${username}/new`,      text:'Create Campaign'}]
           };
 
-
           return(menus[type]);
         }
 
 
       return(
-        <nav className="top-bar" data-topbar role="navigation">
+        <div className="fixed">
+          <nav className="top-bar" data-topbar role="navigation">
 
-          <div className="right">
             <ul className="menu">
               <li><IndexLink className="brand" to="/"> <img src="./images/brand.png"/> </IndexLink></li>
                 {
-                  getMenuData(type).map( (item)=> <li key={item.id}><Link to={ item.route }> { item.text } </Link></li> )
+                  getMenuData(type).map( (item)=> <li key={item.id}><Link to={ item.route } activeClassName="active" activeStyle={{fontWeight:'bold'}}> { item.text } </Link></li> )
                 }
                 <li><IndexLink to="/"> Logout </IndexLink> </li>
             </ul>
-          </div>
 
-        </nav>
+          </nav>
+        </div>
       );
     }
 });

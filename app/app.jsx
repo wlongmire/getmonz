@@ -23,8 +23,10 @@ let SponserAccount =              require('SponsorAccount');
 let SponserNewCampaign =          require('SponsorNewCampaign');
 
 //load foundation
-require('style!css!foundation-sites/dist/foundation.min.css')
+require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
+
+require('style!css!fixed-data-table/dist/fixed-data-table.min.css');
 
 //load custom css
 require('style!css!sass!applicationStyles');
@@ -56,7 +58,6 @@ ReactDOM.render(
       <Route path="/sponsor/:user_id/new"                 component={SponserNewCampaign} />
       <Route path="/sponsor/:user_id/account"             component={SponserAccount} />
     </Route>
-
   </Router>,
   document.getElementById('app')
 );

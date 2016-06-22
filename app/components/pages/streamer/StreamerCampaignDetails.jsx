@@ -1,8 +1,6 @@
 let { Link } = require('react-router');
 let React = require('react');
 
-let Nav = require('Nav');
-
 let CampaignDetails = React.createClass({
   render: function() {
     return(

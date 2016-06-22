@@ -61,11 +61,10 @@ let Signup = React.createClass({
             <input type="Password" ref="Password" placeholder="Enter Password"/>
             <input type="Password" ref="Password" placeholder="Reenter Password"/>
 
-
             <h3>What's your business?</h3>
             <div className="button-group">
-              <button href="#" className="small button radius" onClick={()=>this.handleTypeChange("streamer")}>Streamer</button>
-              <button href="#" className="small button radius" onClick={()=>this.handleTypeChange("sponsor")}>Sponsor</button>
+              <button href="#" className="small button radius" onClick={(e)=>{e.preventDefault(); this.handleTypeChange("streamer")}}>Streamer</button>
+              <button href="#" className="small button radius" onClick={(e)=>{e.preventDefault(); this.handleTypeChange("sponsor")}}>Sponsor</button>
             </div>
 
             { showForm(formType) }
