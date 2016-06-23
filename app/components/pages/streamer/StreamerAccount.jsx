@@ -1,50 +1,93 @@
-let { Link } = require('react-router');
 let React = require('react');
+let { Chart } = require('react-d3-core');
+let { LineChart } = require('react-d3-basic');
 
 let StreamerAccount = React.createClass({
   render: function() {
+    let chartData = [
+      {"monz":0, "index":0},
+      {"monz":12, "index":1},
+      {"monz":500,"index":2},
+      {"monz":300,"index":3}
+    ];
+
+    var chartSeries = [
+      {
+        field: 'monz',
+        name: 'MONZ',
+        color: '#ff7f0e',
+        style: {
+          "stroke-width": 2,
+          "stroke-opacity": .2,
+          "fill-opacity": .2
+        }
+      }
+    ],
+    x = function(d) {
+      return d.index;
+    }
+
     return(
         <div className="row container">
-          
+
           <main className="small-12 large-8 columns">
 
-            {/* Brand Title */}
-            <div className="row">
-              <img src="http://lorempixel.com/100/100/abstract/"/>
-              <h1>Razer</h1>
-              <p>Man O War Wireless Headset Release</p>
-            </div>
-
-            {/* Campaign Description */}
+            {/* Overall Revenue */}
             <section className="row">
-              <h4>Campaign Description:</h4>
-              <p>Aliquet non vestibulum consequat eros a lectus  tincidunt suspendisse orci parturient adipiscing erat quis fusce a habitasse a sem mus sed mus scelerisque suspendisse purus vehicula. </p>
-            </section>
+              <h4>Overall  Revenue:</h4>
 
-            {/* Length of Campaign */}
-            <section className="row">
-              <div className="small-12 large-6">
-                <h4>Starts:</h4>
-                <p> 10/2/2016 </p>
-              </div>
+                <LineChart
+                  width= {700}
+                  height= {300}
+                  data= {chartData}
+                  chartSeries= {chartSeries}
+                  x= {x}
+                />
 
-              <div className="small-12 large-6">
-                <h4>Length:</h4>
-                <p> 3 months </p>
-              </div>
             </section>
 
 
-            {/* Campaign Toolkit */}
-            <section className="row brand_title">
-              <h4 className="title">Campaign Toolkit:</h4>
-              <ul>
-                <li><a href="#">Video</a></li>
-                <li><a href="#">Profile Coupon</a></li>
-                <li><a href="#">Billboard</a></li>
-                <li><a href="#">Script</a></li>
-              </ul>
+            {/* Your MONZ */}
+            <section className="row">
+              <h4>Your MONZ:</h4>
+              <div className="small-6 large-6 columns">
+                <h5>Overall Revenue:</h5>
+                <p> 31,203 monz </p>
+              </div>
 
+              <div className="small-6 large-6 columns">
+                <h5>Current Exchange:</h5>
+                <p> $0.50 per monz </p>
+              </div>
+
+            </section>
+
+            {/* Campaign Overview */}
+            <section className="row">
+              <h4>Campaign Overview:</h4>
+              <div className="row">
+                <div className="small-6 large-3 columns">
+                  <h5>Total Campaigns:</h5>
+                  <p> 3 </p>
+                </div>
+
+                <div className="small-6 large-3 columns">
+                  <h5>Total Conversions:</h5>
+                  <p> 43 </p>
+                </div>
+
+                <div className="small-6 large-3 columns">
+                  <h5>Videos Played:</h5>
+                  <p> 43 </p>
+                </div>
+
+                <div className="small-6 large-3 columns">
+                  <h5>Clickthroughs:</h5>
+                  <p> 6 </p>
+                </div>
+              </div>
+
+              <a href="/sponsor/:user_id/new" className="button">Get New Campaign</a>
             </section>
 
           </main>

@@ -26,7 +26,10 @@ let SponserNewCampaign =          require('SponsorNewCampaign');
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
+//module css
 require('style!css!fixed-data-table/dist/fixed-data-table.min.css');
+require('style!css!react-datepicker/dist/react-datepicker.min.css');
+require('style!css!react-select/dist/react-select.min.css');
 
 //load custom css
 require('style!css!sass!applicationStyles');
